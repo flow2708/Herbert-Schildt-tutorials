@@ -6,7 +6,14 @@ public class VarArgs {
             System.out.println(num);
         }
     }
+    void test(boolean ... a) {
+        for (boolean bool : a) {
+            System.out.println(bool);
+        }
+    }
     public static void main(String[] args) {
-        new VarArgs().test(1, 2, 3, 4, 5, 6, 7);
+        VarArgs va = new VarArgs();
+        va.test(1, 2, 3, 4, 5, 6, 7);
+        va.test(true, false, true, true, false);
     }
 }
